@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crud Application</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <div class="container-fluid ">
+      <div class="table-responsive mt-5">
+        <table class="table caption-top">
+          <caption class="mb-3 text-end">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Add User</button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add User</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-start">
+                    <form>
+                      <div class="mb-3">
+                        <div class="alert alert-danger d-none" >
+                          Please, check that the information is corrects
+                        </div>
+                      </div>
+                        <div class="mb-3">
+                          <label for="recipient-name">Name:</label>
+                          <input type="text" class="form-control post-name" id="name">
+                        </div>
+                        <div class="mb-3">
+                          <label for="message-text ">Last Name:</label>
+                          <input type="text" class="form-control post-last-name" id="last-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text">Phone Number:</label>
+                            <input type="text" class="form-control post-phone" id="last-name">
+                          </div>
+                          <div class="mb-3">
+                            <label for="message-text">Email:</label>
+                            <input type="text" class="form-control post-email" id="last-name">
+                          </div>
+                      </form>
+                </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary add-btn">Add</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">#ID</th>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">Phone Number</th>
+              <th scope="col">Email</th>
+              <th scope="col" class="text-end">Action</th>
+            </tr>
+          </thead>
+          <tbody class="table-body">
+          </tbody>
+        </table>
+      </div>
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Update User</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                      <label for="recipient-name">Name:</label>
+                      <input type="text" class="form-control" id="edit-name">
+                    </div>
+                    <div class="mb-3">
+                      <label for="message-text">Last Name:</label>
+                      <input type="text" class="form-control" id="edit-last-name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text">Phone Number:</label>
+                        <input type="text" class="form-control" id="edit-phone">
+                      </div>
+                      <div class="mb-3">
+                        <label for="message-text">Email:</label>
+                        <input type="text" class="form-control" id="edit-email">
+                      </div>
+                  </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary update-btn" data-bs-dismiss="modal">Save Changes</button>
+              <!-- <button type="button" class="btn btn-primary ">Save Changes</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
